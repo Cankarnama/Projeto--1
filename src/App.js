@@ -12,7 +12,20 @@ import PreFooter from './components/preFooter';
 import Footer from './components/footer';
 
 function App() {
-    return (<div>Hello world</div>)
+    return (
+        <>
+            <AppHeader />
+            <HeroSection />
+            <CryptotableSection />
+            <EarnSection />
+            <CreateCryptoSection />
+            <Trust />
+            <Stats />
+            <GetStarted />
+            <PreFooter />
+            <Footer />
+        </>
+    )
 }
 
 export default App;
