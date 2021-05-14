@@ -1,0 +1,570 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 0px;
+  color: var(--blue);
+}
+
+.btn {
+  padding: 8px 15px;
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: var(--blue);
+  border-radius: var(--small-radius);
+  border: none;
+}
+
+.btn.empty {
+  color: var(--text);
+  background: transparent;
+  font-weight: 500;
+}
+
+.btn.success {
+  background-color: var(--green);
+}
+
+.app-header nav {
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  position: initial;
+}
+
+.app-header nav > * {
+  padding: 23px 0;
+  color: var(--text);
+  user-select: none;
+}
+
+.app-header nav > *:not(:last-child) {
+  margin-right: 35px;
+}
+
+.app-header nav > :is(a, span)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  background-color: var(--blue);
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.app-header nav > *:hover::before {
+  opacity: 1;
+}
+
+.app-header nav .menu {
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  padding: 50px var(--padding-x);
+  background-color: #fff;
+  width: 100%;
+  display: none;
+  box-shadow: 0 8px 10px 0px #aaaaaa3a;
+  animation: slide-fade-out 0.2s;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-header nav > span:hover + .menu,
+.menu:hover {
+  display: flex;
+  padding: 40px 20%;
+  max-height: 250px;
+}
+
+.app-header nav ul {
+  list-style: none;
+}
+
+.app-header nav .menu li::before {
+  padding-left: -30px;
+}
+
+.app-header nav .menu li a {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 8px 0;
+}
+
+.app-header nav .menu span:first-child {
+  font-size: 20px;
+  font-weight: 800;
+  margin-right: 15px;
+  /* display: none; */
+}
+
+.app-header nav .menu .links {
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.app-header nav .menu .desc p {
+  margin-top: 10px;
+  font-size: 16px;
+  max-width: 300px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.app-header nav .menu .desc a {
+  color: var(--blue);
+  font-size: 16px;
+}
+
+@keyframes slide-fade-out {
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.hero-section {
+  min-height: 100vh;
+  padding: 5% 12%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section > div {
+  flex: 1;
+}
+
+.hero-section .text-side a {
+  color: var(--blue);
+  font-weight: bolder;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section h1 {
+  font-size: 65px;
+  line-height: 70px;
+  color: black;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.hero-section p {
+  font-size: 22px;
+  font-weight: 500;
+  color: #000;
+}
+
+.hero-section .form {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.hero-section .form input {
+  flex: 1;
+  height: 100%;
+  padding: 25px 20px;
+  border-radius: 5px;
+  font-size: 17px;
+  border: 1px solid #ccc;
+  letter-spacing: 1px;
+}
+
+.hero-section .form button {
+  padding: 25px 50px;
+  background-color: var(--blue);
+  margin-left: 10px;
+}
+
+.hero-section .image-side {
+  padding-left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.crypto-table {
+  padding: 0 8%;
+  padding-bottom: 5%;
+  min-height: 50vh;
+}
+
+.crypto-table table {
+  border: 1px solid #eee;
+  width: 100%;
+  min-height: 200px;
+  border-spacing: 0px;
+}
+
+.crypto-table table th {
+  text-align: left;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.crypto-table :is(th, td) {
+  padding: 20px 0;
+  padding-right: 40px;
+}
+
+.crypto-table tr :is(th:first-child, td:first-child) {
+  padding-left: 40px;
+}
+
+.crypto-table td,
+.crypto-table thead {
+  border-top: 1px solid #eee;
+  font-size: 18px;
+}
+
+.crypto-table tbody td:nth-child(4) {
+  color: rgb(243, 88, 88);
+}
+
+.crypto-table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+.crypto-table .btn {
+  background-color: var(--green);
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+#stretch-col {
+  width: 50%;
+}
+
+.crypto-table td div {
+  display: flex;
+  align-items: center;
+}
+
+.crypto-table .abrv {
+  color: #aaa;
+  margin-left: 20px;
+}
+
+.earn {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  padding-bottom: 8%;
+}
+
+.earn > div {
+  flex: 1;
+}
+
+section .info h2 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: black;
+}
+
+section .info p {
+  margin-bottom: 25px;
+  color: black;
+}
+
+section .info a {
+  padding: 10px 20px;
+}
+
+.earn .options .option {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  color: black;
+}
+
+.earn .options .option:hover {
+  box-shadow: 0 5px 10px 5px #0000001a;
+}
+
+.earn .option .name {
+  font-size: 22px;
+  font-weight: 600;
+  color: black;
+  margin-left: 20px;
+}
+
+.earn .option .other {
+  font-size: 18px;
+  color: black;
+  margin: 0 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.earn .option .type {
+  margin-left: auto;
+}
+
+.earn .options .btn.empty {
+  color: var(--blue);
+  padding: 20px;
+}
+
+.create {
+  min-height: 50vh;
+  padding: 0 8%;
+  padding-bottom: 6%;
+  border-bottom: 1px solid #dedede;
+}
+
+section .header {
+  text-align: center;
+  font-size: 35px;
+}
+
+section .header h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+section .header p {
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+section .body {
+  display: flex;
+  padding-top: 8%;
+}
+
+.create .body .services {
+  flex: 0.35;
+}
+
+.create .body h5 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.create .body .service {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.create .service p {
+  font-size: 16px;
+  line-height: 25px;
+  opacity: 0.7;
+}
+
+.create .body .service .icon {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px 5px #0000000f;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create .service img {
+  width: 45%;
+  height: 45%;
+}
+
+.create .presentation {
+  flex: 0.65;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create .presentation img {
+  width: 95%;
+}
+
+.trust {
+  min-height: 50vh;
+  padding: 5% 8%;
+  padding-bottom: 8%;
+}
+
+.trust .body .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3%;
+  text-align: center;
+}
+
+.trust .item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.trust .item p {
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.trust .item a {
+  color: var(--blue);
+  font-weight: 500;
+}
+
+.trust img {
+  margin-bottom: 20%;
+  width: 70px;
+  height: 70px;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding: 3% 8%;
+  background-color: var(--blue);
+}
+
+.stats h1 {
+  font-size: 70px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.stats p {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 18px;
+}
+
+.get-started {
+  padding: 5% 8%;
+}
+
+.get-started .body {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 6% 10%;
+}
+
+.get-started .body hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.get-started img {
+  margin-bottom: 20px;
+}
+
+.get-started .body h3 {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.prefooter {
+  background-color: rgb(233, 246, 255);
+  min-height: 60vh;
+  display: flex;
+  padding-left: 12%;
+  padding-right: 0;
+}
+
+.prefooter .info {
+  height: 100%;
+  margin: auto 0;
+}
+
+.prefooter .image {
+  flex: 1;
+  display: flex;
+}
+
+.prefooter .image img {
+  margin-left: auto;
+  background-color: red;
+  width: 90%;
+  height: 100%;
+}
+
+footer {
+  min-height: 100vh;
+  padding: 5% 8%;
+  display: flex;
+}
+
+footer .site-info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 0.5;
+  margin-right: auto;
+}
+
+footer .site-info .logo {
+  margin-bottom: 50px;
+}
+
+footer select {
+  border: 1px solid #aaa;
+  padding: 15px;
+  width: 70%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+footer .site-info p {
+  opacity: 0.6;
+  font-size: 18px;
+  word-spacing: 2px;
+}
+
+footer .navigations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-left: auto;
+  flex: 1;
+}
+
+footer .navigations .item {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  flex-wrap: wrap;
+}
+
+footer .navigations .item a {
+  padding: 5px 0;
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+footer .navigations h5 {
+  font-size: 18px;
+  font-weight: 500;
+}
